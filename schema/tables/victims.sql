@@ -1,0 +1,1 @@
+CREATE TABLE victims ( victimid INTEGER NOT NULL, fname VARCHAR(50), lname VARCHAR(50), dob DATE, gender CHAR(1), city VARCHAR(50), province VARCHAR(50), vehicleid VARCHAR(4), crashno INTEGER, PRIMARY KEY (victimid), FOREIGN KEY(vehicleid) REFERENCES vehicles (vehicleid), FOREIGN KEY(crashno) REFERENCES crashes (crashno) )

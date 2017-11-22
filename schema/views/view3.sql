@@ -1,0 +1,2 @@
+-- Returns crashno, fname, lname, city where the crashcity and victim's city are the same
+CREATE VIEW view3 AS SELECT vt.crashno, vt.lname, vt.fname, vt.city FROM victims AS vt WHERE vt.city=(SELECT c.crashcity FROM crashes AS c WHERE vt.city=c.crashcity)

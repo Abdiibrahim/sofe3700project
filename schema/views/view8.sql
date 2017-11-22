@@ -1,0 +1,2 @@
+-- Returns the lplate, make, model, fname and lname of every victim
+CREATE VIEW view8 as select vh.lplate, vh.make, vh.model, vt.fname, vt.lname from vehicles as vh, victims as vt where vt.vehicleid=vh.vehicleid

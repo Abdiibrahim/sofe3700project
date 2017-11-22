@@ -1,0 +1,1 @@
+CREATE TABLE vehicles ( lplate VARCHAR(50), province VARCHAR(50), vehicleid VARCHAR(4) NOT NULL, make VARCHAR(50), model VARCHAR(50), year INTEGER, colour VARCHAR(50), PRIMARY KEY (vehicleid) )

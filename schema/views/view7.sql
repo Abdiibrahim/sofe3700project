@@ -1,0 +1,2 @@
+-- Returns all columns in victim table where the victimid matches the victimid in the vehicles table where the make is Toyota
+CREATE VIEW view7 AS SELECT vt.* FROM victims AS vt, vehicles AS vh WHERE vt.vehicleid=vh.vehicleid AND vh.make='Toyota'

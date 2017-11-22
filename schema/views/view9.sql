@@ -1,0 +1,2 @@
+-- Returns victimid, fname, lname of victims and make, model of vehicles where the crash occured at night
+CREATE VIEW view9 as select vt.victimid, vt.fname, vt.lname, vh.make, vh.model FROM victims as vt, vehicles as vh, crashes as c WHERE c.crashno=vt.crashno AND vt.vehicleid=vh.vehicleid AND c.crashtime='Night'

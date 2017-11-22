@@ -1,0 +1,24 @@
+{% extends 'table.html' %}
+{% block table %}
+  <caption>Crash Table</caption>
+	<tr>
+		<th>Crash No.</th>
+		<th>Date of Crash</th>
+		<th>City</th>
+		<th>Province</th>
+		<th>Crash Location</th>
+		<th>Time of Crash</th>
+		<th>Cause of Crash</th>
+	</tr>
+	{% for crash in crashes %}
+	<tr>
+		<td>{{ crash.crashno }}</td>
+		<td>{{ crash.crashdate }}</td>
+		<td>{{ crash.crashcity }}</td>
+		<td>{{ crash.crashprovince }}</td>
+		<td>{{ crash.location }}</td>
+		<td>{{ crash.crashtime }}</td>
+		<td>{{ crash.crashcause }}</td>
+	</tr>
+	{% endfor %}
+{% endblock %}

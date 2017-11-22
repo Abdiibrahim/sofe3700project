@@ -1,0 +1,1 @@
+CREATE TABLE injuries ( crashno INTEGER NOT NULL, victimid INTEGER NOT NULL, injurytype VARCHAR(50), fatality BOOLEAN, driver BOOLEAN, PRIMARY KEY (crashno, victimid), FOREIGN KEY(crashno) REFERENCES crashes (crashno), FOREIGN KEY(victimid) REFERENCES victims (victimid), CHECK (fatality IN (0, 1)), CHECK (driver IN (0, 1)) )

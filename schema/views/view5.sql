@@ -1,0 +1,2 @@
+-- Returns fname, lname, crashno of all male victims and also any female victims that are from Toronto
+CREATE VIEW view5 AS SELECT fname, lname, crashno FROM victims AS vt WHERE vt.Gender='M' UNION select fname, lname, crashno FROM (SELECT * FROM victims AS vt WHERE vt.gender='F') AS h WHERE h.City='Toronto'
