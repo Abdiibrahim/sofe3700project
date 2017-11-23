@@ -47,6 +47,12 @@ def injuries():
 	return render_template('injuries.html', injuries = injury)
 
 
+@app.route('/view1')
+def view1():
+	view = session.query(Victims).join(Vehicles, Vehicles.vehicleid==Victims.vehicleid).join(Crashes, Crashes.crashno==Victims.crashno).add_columns(Victims.fname, Victims.lname, Vehicles.vehicleid, Crashes.crashdate).all()
+	return render_template('view1.html', view1 = view)
+
+
 # create simple api that takes in crashnumber and response with crash details of said crash
 # ex http://localhost:5000/api/2003
 @app.route('/api/<crashnumber>')
