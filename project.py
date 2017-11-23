@@ -47,6 +47,14 @@ def injuries():
 	return render_template('injuries.html', injuries = injury)
 
 
+# create simple api that takes in crashnumber and response with crash details of said crash
+# ex http://localhost:5000/api/2003
+@app.route('/api/<crashnumber>')
+def crashesJSON(crashnumber):
+	crashes = session.query(Crashes).filter_by(crashno = crashnumber).one()
+	return jsonify(crashes = crashes.serialize)
+	
+
 if __name__ == '__main__':
 	app.debug = True
 	app.run(host = '0.0.0.0', port = 5000)
