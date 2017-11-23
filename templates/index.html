@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block main %}
+<div>
+	<a href = "{{url_for('crashes')}}">Crashes</a>
+</div>
+<div>
+	<a href = "{{url_for('victims')}}">Victims</a>
+</div>
+<div>
+	<a href = "{{url_for('vehicles')}}">Vehicles</a>
+</div>
+<div>
+	<a href = "{{url_for('injuries')}}">Injuries</a>
+</div>
+{% endblock %}

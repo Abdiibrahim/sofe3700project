@@ -1,0 +1,20 @@
+{% extends 'table.html' %}
+{% block table %}
+  <caption>Injury Table</caption>
+	<tr>
+		<th>Crash No.</th>
+		<th>Victim ID</th>
+		<th>Injury</th>
+		<th>Driver?</th>
+		<th>Fatality?</th>
+	</tr>
+	{% for injury in injuries %}
+	<tr>
+		<td>{{ injury.crashno }}</td>
+		<td>{{ injury.victimid }}</td>
+		<td>{{ injury.injurytype }}</td>
+		<td>{{ injury.driver }}</td>
+		<td>{{ injury.fatality }}</td>
+	</tr>
+	{% endfor %}
+{% endblock %}

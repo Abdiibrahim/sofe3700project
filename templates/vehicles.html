@@ -1,0 +1,24 @@
+{% extends 'table.html' %}
+{% block table %}
+  <caption>Vehicles Table</caption>
+	<tr>
+		<th>Vehicle ID</th>
+		<th>Licence Plate</th>
+		<th>Province</th>
+		<th>Make</th>
+		<th>Model</th>
+		<th>Year</th>
+		<th>Colour</th>
+	</tr>
+	{% for vehicle in vehicles %}
+	<tr>
+		<td>{{ vehicle.vehicleid }}</td>
+		<td>{{ vehicle.lplate }}</td>
+		<td>{{ vehicle.province }}</td>
+		<td>{{ vehicle.make }}</td>
+		<td>{{ vehicle.model }}</td>
+		<td>{{ vehicle.year }}</td>
+		<td>{{ vehicle.colour }}</td>
+	</tr>
+	{% endfor %}
+{% endblock %}
