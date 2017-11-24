@@ -1,15 +1,36 @@
 {% extends 'main.html' %}
 {% block main %}
+<h1>Tables</h1></br>
 <div>
 	<a href = "{{url_for('crashes')}}">Crashes</a>
-</div>
-<div>
+	</br>
 	<a href = "{{url_for('victims')}}">Victims</a>
-</div>
-<div>
+	</br>
 	<a href = "{{url_for('vehicles')}}">Vehicles</a>
-</div>
-<div>
+	</br>
 	<a href = "{{url_for('injuries')}}">Injuries</a>
+</div>
+<h1>Selected Views</h1></br>
+<div>
+	<a href = "{{url_for('view1')}}">View 1</a>
+	</br>
+	<a href = "{{url_for('view3')}}">View 3</a>
+	</br>
+	<a href = "{{url_for('view5')}}">View 5</a>
+	</br>
+	<a href = "{{url_for('view6')}}">View 6</a>
+	</br>
+	<a href = "{{url_for('view7')}}">View 7</a>
+	</br>
+	<a href = "{{url_for('view8')}}">View 8</a>
+	</br>
+	<a href = "{{url_for('view9')}}">View 9</a>
+	</br>
+	<a href = "{{url_for('view10')}}">View 10</a>
+</div>
+</br>
+<div>
+	<a class="twitter-timeline" data-width="400" data-height="500" href="https://twitter.com/opp_gtatraffic">Tweets by opp_gtatraffic</a> 
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'table.html' %}
+{% block table %}
+  <caption>View 10</caption>
+	<tr>
+		<th>Victim ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Make</th>
+		<th>Model</th>
+		<th>Fatality?</th>
+	</tr>
+	{% for view in view10 %}
+	<tr>
+		<td>{{ view.victimid }}</td>
+		<td>{{ view.fname }}</td>
+		<td>{{ view.lname }}</td>
+		<td>{{ view.make }}</td>
+		<td>{{ view.model }}</td>
+		<td>{{ view.fatality }}</td>
+	</tr>
+	{% endfor %}
+{% endblock %}
