@@ -6,6 +6,8 @@
 		<th>Date of Crash</th>
 		<th>City</th>
 		<th>Province</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
 		<th>Crash Location</th>
 		<th>Time of Crash</th>
 		<th>Cause of Crash</th>
@@ -14,8 +16,10 @@
 	<tr>
 		<td>{{ crash.crashno }}</td>
 		<td>{{ crash.crashdate }}</td>
-		<td>{{ crash.crashcity }}</td>
+		<td><a href='/crashes/map/{{crash.crashno}}'>{{ crash.crashcity }}</a></td>
 		<td>{{ crash.crashprovince }}</td>
+		<td>{{ crash.crashlat }}</td>
+		<td>{{ crash.crashlng }}</td>
 		<td>{{ crash.location }}</td>
 		<td>{{ crash.crashtime }}</td>
 		<td>{{ crash.crashcause }}</td>

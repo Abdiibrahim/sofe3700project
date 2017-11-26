@@ -2,10 +2,16 @@ from flask import Flask, render_template, jsonify, request, redirect, url_for, m
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Victims, Vehicles, Crashes, Injuries
+from flask_googlemaps import GoogleMaps
+from flask_googlemaps import Map
+import numpy as np
 
 
 # initialize server and connect to database
 app = Flask(__name__)
+app.config['GOOGLEMAPS_KEY'] = "AIzaSyBgjSr2wdxq3G9H7zOkemX3Fl1hwe2y4gc"
+GoogleMaps(app, key="AIzaSyBgjSr2wdxq3G9H7zOkemX3Fl1hwe2y4gc")
+
 engine = create_engine("sqlite:///crashproject.db")
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
@@ -16,6 +22,20 @@ session = DBSession()
 @app.route('/index')
 def index():
 	return render_template('index.html')
+
+
+@app.route('/crashes/map/<crashnumber>')
+def crashmap(crashnumber):
+	crash = session.query(Crashes).add_columns(Crashes.crashlat, Crashes.crashlng, Crashes.crashno, Crashes.crashcity).filter_by(crashno = crashnumber).one()
+	# creating a map in the view
+	mymap = Map(
+		identifier="view-side",
+		lat=crash[1],
+		lng=crash[2],
+		zoom=10,
+		markers=[(crash[1], crash[2])]
+	)
+	return render_template('map.html', mymap=mymap, crash=crash) 
 
 	
 # crashes page displays entire crashes table

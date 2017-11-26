@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, INTEGER, VARCHAR, CHAR, String, BOOLEAN, DATE
+from sqlalchemy import Column, ForeignKey, INTEGER, VARCHAR, CHAR, String, BOOLEAN, DATE, REAL
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -28,7 +28,7 @@ class Vehicles(Base):
             'model': self.model,
             'year': self.year,
             'colour': self.colour,
-        }
+			}
 
 
 class Crashes(Base):
@@ -41,6 +41,8 @@ class Crashes(Base):
     crashcause = Column(String)
     crashcity = Column(VARCHAR(50))
     crashprovince = Column(VARCHAR(50))
+    crashlat = Column(REAL)
+    crashlng = Column(REAL)
 
     @property
     def serialize(self):
@@ -51,7 +53,11 @@ class Crashes(Base):
             'crashdate': self.crashdate,
             'crashtime': self.crashtime,
             'crashcause': self.crashcause,
-        }
+            'crashcity': self.crashcity,
+            'crashprovince': self.crashprovince,
+			'crashlat': self.crashlat,
+			'crashlng': self.crashlng,
+            }
 
 
 class Victims(Base):

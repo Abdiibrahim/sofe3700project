@@ -22,7 +22,7 @@ session.add(vehicle2)
 session.commit()
 
 crash = Crashes(crashno=2001, location='rural roads', crashdate=datetime.date(2017, 1, 1), crashtime='Morning',
-                crashcause='wet road', crashcity='Pickering', crashprovince='ON')
+                crashcause='wet road', crashcity='Pickering', crashprovince='ON', crashlat=43.8384, crashlng=-79.0868)
 session.add(crash)
 session.commit()
 
@@ -57,7 +57,7 @@ session.add(vehicle2)
 session.commit()
 
 crash = Crashes(crashno=2002, location='highway', crashdate=datetime.date(2016, 2, 15), crashtime='Night', 
-				crashcause='Speed', crashcity='Kitchener', crashprovince='ON')
+				crashcause='Speed', crashcity='Kitchener', crashprovince='ON', crashlat=43.4503, crashlng=-80.4832)
 session.add(crash)
 session.commit()
 
@@ -92,7 +92,7 @@ session.add(vehicle2)
 session.commit()
 
 crash = Crashes(crashno=2003, location='highway', crashdate=datetime.date(2017, 12, 1), crashtime='Afternoon', 
-				crashcause='Snow', crashcity='Markham', crashprovince='ON')
+				crashcause='Snow', crashcity='Markham', crashprovince='ON', crashlat=43.8561, crashlng=-79.3370)
 session.add(crash)
 session.commit()
 
@@ -127,7 +127,7 @@ session.add(vehicle2)
 session.commit()
 
 crash = Crashes(crashno=2004, location='residential', crashdate=datetime.date(2016, 11, 12), crashtime='Afternoon',
-                crashcause='Distracted', crashcity='Hamilton', crashprovince='ON')
+                crashcause='Distracted', crashcity='Hamilton', crashprovince='ON', crashlat=43.2557, crashlng=-79.8711)
 session.add(crash)
 session.commit()
 
@@ -162,7 +162,7 @@ session.add(vehicle2)
 session.commit()
 
 crash = Crashes(crashno=2005, location='highway', crashdate=datetime.date(2015, 5, 10), crashtime='Night',
-                crashcause='Following too closely', crashcity='Kingston', crashprovince='ON')
+                crashcause='Following too closely', crashcity='Kingston', crashprovince='ON', crashlat=44.2312, crashlng=-76.4860)
 session.add(crash)
 session.commit()
 
@@ -197,7 +197,7 @@ session.add(vehicle2)
 session.commit()
 
 crash = Crashes(crashno=2006, location='intersection', crashdate=datetime.date(2010, 4, 18), crashtime='Morning',
-                crashcause='Ran red light', crashcity='Oshawa', crashprovince='ON')
+                crashcause='Ran red light', crashcity='Oshawa', crashprovince='ON', crashlat=43.8971, crashlng=-78.8658)
 session.add(crash)
 session.commit()
 
