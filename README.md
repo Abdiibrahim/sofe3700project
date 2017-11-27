@@ -1,11 +1,4 @@
 # SOFE 3700U - Final Project - Group 22
-```
-Abdi Ibrahim       - 100582257
-Austin McCulloch   - 100588856
-Prasheel Bhagalia  - 100587586
-Steven Pavlatos    - 100590313
-```
-
 Application that stores vehicle accident data in a SQLite database, acts as a web server, and creates a REST API to serve JSON files. Utilizes Google's GoogleMaps API to display city locations of crashes.
 
 # Windows Setup
