@@ -3,13 +3,15 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Victims, Vehicles, Base, Crashes, Injuries
 import datetime
 
+# open 'crashproject.db' and create engine
 engine = create_engine('sqlite:///crashproject.db')
 Base.metadata.bind = engine
 
+# start a session with the database
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-
+# Add tuples for the crashes into the database
 # Data for crash1
 vehicle1 = Vehicles(lplate='ARF 5975', province='ON', vehicleid='C25D', make='GMC', model='Sierra',
                     year=2005, colour='White')

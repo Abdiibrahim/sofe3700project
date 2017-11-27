@@ -6,6 +6,8 @@ from sqlalchemy.orm import relationship
 Base = declarative_base()
 
 
+# Create class Vehicles for the vehicles table
+# vehicleid is the primary key
 class Vehicles(Base):
     __tablename__ = 'vehicles'
 
@@ -31,6 +33,8 @@ class Vehicles(Base):
 			}
 
 
+# Create class Crashes for the crashes table
+# crashno is the primary key
 class Crashes(Base):
     __tablename__ = 'crashes'
 
@@ -60,6 +64,10 @@ class Crashes(Base):
             }
 
 
+# Create class Victims for the victims table
+# victimid is the primary key
+# vehicleid is a foreign key for vehicles.vehicleid
+# crashno is a foreign key for crashes.crashno
 class Victims(Base):
     __tablename__ = 'victims'
 
@@ -91,6 +99,10 @@ class Victims(Base):
         }
 
 
+# Create class Injuries for the injuries table
+# crashno and victimid are primary keys
+# crashno is a foreign key for crashes.crashno
+# victimid is a foreign key for victims.victimid
 class Injuries(Base):
     __tablename__ = 'injuries'
 
@@ -114,5 +126,6 @@ class Injuries(Base):
         }
 
 
+# creates database 'crashproject.db' with the above tables
 engine = create_engine('sqlite:///crashproject.db')
 Base.metadata.create_all(engine)

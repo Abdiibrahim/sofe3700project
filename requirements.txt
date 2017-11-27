@@ -18,3 +18,4 @@ six==1.10.0
 SQLAlchemy==1.0.15
 Werkzeug==0.11.11
 WTForms==2.1
+flask-googlemaps==0.2.5
