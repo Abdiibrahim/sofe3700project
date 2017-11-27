@@ -1,0 +1,2 @@
+-- Lists the last name of all victims that were involved in a Highway accident
+CREATE VIEW view2 AS SELECT lname FROM Victims WHERE crashno = ANY(SELECT crashno FROM Crashes WHERE Location = 'Highway') GROUP BY lname;

@@ -1,0 +1,2 @@
+-- Returns the victim's city and crashtime where crash numbers in Victims and Crashes table are the same.
+CREATE VIEW view4 AS SELECT Victims.city, Crashes.crashtime FROM Victims FULL JOIN Crashes ON Victims.crashno = Crashes.crashno;
