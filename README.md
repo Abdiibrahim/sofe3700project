@@ -35,3 +35,5 @@ python database_setup.py
 python populate.py
 python project.py
 ```
+# Special Mentions
+rochacbruno's [Flask-googlemaps](https://github.com/rochacbruno/Flask-GoogleMaps)
