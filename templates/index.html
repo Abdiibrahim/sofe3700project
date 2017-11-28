@@ -12,21 +12,14 @@
 </div>
 <h1>Selected Views</h1></br>
 <div>
-	<a href = "{{url_for('view1')}}">View 1</a>
-	</br>
-	<a href = "{{url_for('view3')}}">View 3</a>
-	</br>
-	<a href = "{{url_for('view5')}}">View 5</a>
-	</br>
-	<a href = "{{url_for('view6')}}">View 6</a>
-	</br>
-	<a href = "{{url_for('view7')}}">View 7</a>
-	</br>
-	<a href = "{{url_for('view8')}}">View 8</a>
-	</br>
-	<a href = "{{url_for('view9')}}">View 9</a>
-	</br>
-	<a href = "{{url_for('view10')}}">View 10</a>
+	<p><a href = "{{url_for('view1')}}">View 1</a> - Returns fname, lname, vehicleid and crashdate of all victims</p>
+	<p><a href = "{{url_for('view3')}}">View 3</a> - Returns crashno, fname, lname, city where the crashcity and victim's city are the same</p>
+	<p><a href = "{{url_for('view5')}}">View 5</a> - Returns fname, lname, crashno, gender, dob, city from the victims table if they are female OR if their crash city is the same as their home city</p>
+	<p><a href = "{{url_for('view6')}}">View 6</a> - Returns fname, lname, crashno, victimid, and location of those who were involved in accidents that occurred in the morning</p>
+	<p><a href = "{{url_for('view7')}}">View 7</a> - Returns all columns in victim table where the victimid matches the victimid in the vehicles table where the make is Toyota</p>
+	<p><a href = "{{url_for('view8')}}">View 8</a> - Returns the lplate, make, model, fname and lname of every victim</p>
+	<p><a href = "{{url_for('view9')}}">View 9</a> - Returns victimid, fname, lname of victims and make, model of vehicles where the crash occured at night</p>
+	<p><a href = "{{url_for('view10')}}">View 10</a> - Returns victimid, fname, lname of victims as well as the make and model of their vehicles, and if the victim suffered a fatality where a back injury occured to the victim</p>
 </div>
 </br>
 <div>
