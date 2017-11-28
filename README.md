@@ -38,34 +38,34 @@ python project.py
 # Website Map
 
 http://localhost:5000/
-|-- /index
-|
-|-- /crashes
-|-- |
-    |--/map/2001
-    |--/map/2002
-    |--/map/2003
-    |--/map/2004
-    |--/map/2005
-    |--/map/2006
-|-- /victims
-|-- /vehicles
-|-- /injuries
-|
-|-- /view1
-|-- /view3
-|-- /view5
-|-- /view6
-|-- /view7
-|-- /view8
-|-- /view9
-|-- /view10
-|
-|--/api/2001
-|--/api/2002
-|--/api/2003
-|--/api/2004
-|--/api/2005
+|-- /index<br />
+|<br />
+|-- /crashes<br />
+|-- |<br />
+    |--/map/2001<br />
+    |--/map/2002<br />
+    |--/map/2003<br />
+    |--/map/2004<br />
+    |--/map/2005<br />
+    |--/map/2006<br />
+|-- /victims<br />
+|-- /vehicles<br />
+|-- /injuries<br />
+|<br />
+|-- /view1<br />
+|-- /view3<br />
+|-- /view5<br />
+|-- /view6<br />
+|-- /view7<br />
+|-- /view8<br />
+|-- /view9<br />
+|-- /view10<br />
+|<br />
+|--/api/2001<br />
+|--/api/2002<br />
+|--/api/2003<br />
+|--/api/2004<br />
+|--/api/2005<br />
 |--/api/2006
 
 # Special Mentions
