@@ -41,13 +41,13 @@ http://localhost:5000/
 |-- /index<br />
 |<br />
 |-- /crashes<br />
-|-- |<br />
-    |--/map/2001<br />
-    |--/map/2002<br />
-    |--/map/2003<br />
-    |--/map/2004<br />
-    |--/map/2005<br />
-    |--/map/2006<br />
+____|<br />
+____|--/map/2001<br />
+____|--/map/2002<br />
+____|--/map/2003<br />
+____|--/map/2004<br />
+____|--/map/2005<br />
+____|--/map/2006<br />
 |-- /victims<br />
 |-- /vehicles<br />
 |-- /injuries<br />
