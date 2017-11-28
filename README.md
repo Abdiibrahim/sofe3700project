@@ -35,5 +35,38 @@ python database_setup.py
 python populate.py
 python project.py
 ```
+# Website Map
+
+http://localhost:5000/
+|-- /index
+|
+|-- /crashes
+|-- |
+    |--/map/2001
+    |--/map/2002
+    |--/map/2003
+    |--/map/2004
+    |--/map/2005
+    |--/map/2006
+|-- /victims
+|-- /vehicles
+|-- /injuries
+|
+|-- /view1
+|-- /view3
+|-- /view5
+|-- /view6
+|-- /view7
+|-- /view8
+|-- /view9
+|-- /view10
+|
+|--/api/2001
+|--/api/2002
+|--/api/2003
+|--/api/2004
+|--/api/2005
+|--/api/2006
+
 # Special Mentions
 rochacbruno's [Flask-googlemaps](https://github.com/rochacbruno/Flask-GoogleMaps)
